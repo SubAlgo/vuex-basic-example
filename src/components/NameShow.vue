@@ -6,15 +6,23 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'NameShow',
   computed: {
+    /*
     name () {
       return this.$store.getters.name
     },
     surname () {
       return this.$store.getters.surname
     }
+    */
+    ...mapGetters([
+      'name',
+      'surname'
+    ])
   }
 }
 </script>
